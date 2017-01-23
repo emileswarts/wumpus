@@ -25,10 +25,13 @@ class Cave
   }
 
   def initialize
-    @rooms = Array.new(15) { { type: :empty } }
+    @rooms = Array.new(14) { { type: :empty } }
+
     @rooms.concat(bats)
     @rooms.concat(bottomless_pits)
     @rooms.concat(wumpus)
+    @rooms.concat(player)
+
     add_adjacent_rooms!
   end
 
@@ -43,6 +46,8 @@ class Cave
   def wumpus
     [{ type: :wumpus } ]
   end
+
+  def player; [ {type: :player} ]; end
 
   def bats
     Array.new(2) do
