@@ -24,7 +24,6 @@ describe 'Cave' do
     expect(cave.rooms.select do |room|
        room[:type] == :player
     end.count).to eq(1)
-
   end
 
   it 'has adjacent rooms' do

@@ -33,6 +33,9 @@ class Cave
     @rooms.concat(player)
 
     add_adjacent_rooms!
+    calculate_
+
+    puts @rooms
   end
 
   private
